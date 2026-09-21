@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name="open_garage",
     packages=["opengarage"],
-    install_requires=["aiohttp>=3.14.3", "async_timeout>=4.0.3"],
+    install_requires=["aiohttp>=3.14.3"],
     entry_points={
         "console_scripts": ["opengarage=opengarage.cli:main"],
     },
@@ -24,7 +24,7 @@ setup(
     },
     version="0.3.1",
     description="A python3 library to communicate with Open Garage",
-    python_requires=">=3.10",
+    python_requires=">=3.11",
     author="Daniel Hjelseth Høyer",
     author_email="mail@dahoiv.net",
     url="https://github.com/Danielhiversen/pyOpenGarage",
@@ -34,7 +34,7 @@ setup(
         "Operating System :: OS Independent",
         "Programming Language :: Python",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
         "Topic :: Home Automation",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],

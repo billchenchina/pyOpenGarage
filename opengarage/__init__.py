@@ -5,7 +5,7 @@ import inspect
 import logging
 
 import aiohttp
-import async_timeout
+import asyncio
 
 from opengarage.dispatcher import CommandDispatcher
 from opengarage.errors import (ResponseError, TransportError,
@@ -149,7 +149,7 @@ class OpenGarage:
         url = f"{self._devip}/{command}"
         resp = None
         try:
-            async with async_timeout.timeout(self._timeout):
+            async with asyncio.timeout(self._timeout):
                 resp = await self.websession.get(url)
             if resp.status != 200:
                 _LOGGER.error(
